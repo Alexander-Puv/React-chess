@@ -14,7 +14,6 @@ export class King extends Figure {
     canMove(target: Cell): boolean {
         if (!super.canMove(target)) return false;
         
-        //target.y === this.cell.y + 1 || target.y === this.cell.y - 1 || target.x === this.cell.x + 1 || target.x === this.cell.x - 1
         for (let i = -1; i < 2; i++) {
             for (let j = -1; j < 2; j++) {
                 if (target.y === this.cell.y + i && target.x === this.cell.x + j) return true;
